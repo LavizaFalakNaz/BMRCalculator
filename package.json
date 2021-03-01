@@ -19,3 +19,5 @@
     "eject": "react-scripts eject"
  },
   "browserslist": [
+   ">0.2%",
+    "not dead",
