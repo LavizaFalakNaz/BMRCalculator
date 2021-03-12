@@ -283,4 +283,66 @@ class Bmr extends Component {
               />
               Imperial (Lbs/In)
             </label>
+                <label>
+              <input
+                type="radio"
+                checked={this.state.mode === "2"}
+                onChange={this.handleModeChange}
+                className="mode"
+                name="mode"
+                value="2"
+              />
+              Metric(Kg/cm)
+            </label>
+          </div>
+          <div className="inputwrap">
+            <label className="label">Gender</label>
+            <label>
+              <input
+                type="radio"
+                checked={this.state.gender === "1"}
+                onChange={this.handleGenderChange}
+                className="genderF"
+                name="gender"
+                value="1"
+              />
+              Female
+            </label>
+            <label>
+              <input
+                type="radio"
+                checked={this.state.gender === "2"}
+                onChange={this.handleGenderChange}
+                className="genderM"
+                name="gender"
+                value="2"
+              />
+              Male
+            </label>
+          </div>
+          {mod}
+          <div className="inputwrap">
+            <label className="label">Age in years</label>
+            <input
+              type="number"
+              onChange={this.handleAgeChange}
+              className="age"
+              name="age"
+              min="0"
+              max="120"
+            />
+          </div>
+          <button type="button" onClick={() => this.calculateBMR()}>
+            Calculate BMR
+          </button>
+          {bmrresult}
+          {act}
+          {cal}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Bmr;
 
